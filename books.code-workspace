@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "broker"
+		},
+		{
+			"path": "client"
+		},
+		{
+			"path": "logger"
+		},
+		{
+			"path": "summarizer"
+		},
+		{
+			"path": "api"
+		},
+		{
+			"path": "container"
+		}
+	],
+	"settings": {}
+}

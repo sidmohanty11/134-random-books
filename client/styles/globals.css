@@ -33,6 +33,13 @@ p, span, li {
   margin: 0 auto;
 }
 
+.navbar {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -40,5 +47,11 @@ p, span, li {
 @media only screen and (max-width: 768px) {
   .container {
     width: 100%;
+  }
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+  p, span, li {
+    font-size: 1.3rem;
   }
 }
