@@ -1,10 +1,9 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 
-const { BOOKS } = require("./books");
 const { serializerBook } = require("./helper");
 
-async function getBook({ title, idx }) {
+async function scrapeBook({ title, idx }) {
   let html = await axios.get(
     "https://www.samuelthomasdavies.com/book-summaries/"
   );
@@ -38,18 +37,6 @@ async function getBook({ title, idx }) {
   return data;
 }
 
-function getRandomBookFromArray() {
-  const idx = Math.ceil(Math.random() * 135);
-  return {
-    title: BOOKS[idx],
-    idx,
-  };
-}
-
-async function fetchRandomBook() {
-  return getBook(getRandomBookFromArray());
-}
-
 module.exports = {
-  fetchRandomBook,
+  scrapeBook,
 };
