@@ -1,5 +1,7 @@
+BROKER_BINARY=brokerApp
+
 build:
-	go build -o brokerApp .
+	go build -o ${BROKER_BINARY} .
 
 run: build
-	./brokerApp
+	./${BROKER_BINARY}

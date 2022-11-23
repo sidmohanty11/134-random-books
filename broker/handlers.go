@@ -6,7 +6,7 @@ import (
 )
 
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
-	req, err := http.NewRequest("GET", "http://localhost:8050/books/random", nil)
+	req, err := http.NewRequest("GET", "http://summarizer/books/random", nil)
 
 	if err != nil {
 		app.errorJSON(w, err, http.StatusBadRequest)

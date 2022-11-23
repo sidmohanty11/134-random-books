@@ -13,9 +13,6 @@
 			"path": "summarizer"
 		},
 		{
-			"path": "api"
-		},
-		{
 			"path": "container"
 		}
 	],

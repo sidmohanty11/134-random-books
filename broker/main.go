@@ -5,8 +5,7 @@ import (
 	"net/http"
 )
 
-const PORT = "8081"
-const HOST = "http://localhost"
+const PORT = "80"
 
 type Config struct {
 }
@@ -19,7 +18,7 @@ func main() {
 		Handler: app.routes(),
 	}
 
-	log.Println("Listening at " + HOST + ":" + PORT)
+	log.Println("Listening at :", PORT)
 
 	if err := srv.ListenAndServe(); err != nil {
 		log.Fatalln(err)
