@@ -49,13 +49,17 @@ export default function Home(props) {
   return (
     <div>
       <Head>
-        <title>{props.data.title || "Random 134 Books!"}</title>
+        <title>{props.data?.title || "Random 134 Books!"}</title>
         <meta name="description" content="Get summary of popular 134 books!" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <header>
         <nav className="navbar">
-          <span>
+          <span style={{
+            display: 'flex',
+            alignItems: 'center',
+          }}>
+            <img src="/logo.png" alt="logo" width={30} height={30} />
             <a href="/">134 Random Books</a>
           </span>
           <span>
@@ -94,7 +98,7 @@ export default function Home(props) {
 }
 
 export const getServerSideProps = async (ctx) => {
-  const req = await fetch("http://localhost:8081/handle");
+  const req = await fetch("http://localhost:8080/handle");
   const data = await req.json();
   return {
     props: data,
